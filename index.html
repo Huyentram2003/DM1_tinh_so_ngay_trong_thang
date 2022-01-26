@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div>
+    <h2>Tính số ngày trong tháng</h2>
+
+    <input type="text" id="s1" placeholder="Nhập Tháng"
+           size="30px">
+    <button type="button" id="s2" onclick="tinhNgay()">
+            tính số ngày
+    </button>
+
+    <p id="s3"></p>
+</div>
+
+<script>
+    let month = document.getElementById('s1') ;
+
+    function tinhNgay() {
+        switch (month.value) {
+            case '1':
+            case '3':
+            case '5':
+            case '7':
+            case '8':
+            case '10':
+            case '12':
+                document.getElementById('s3').innerHTML = 'có 31 ngày'
+                break;
+            case '2':
+                document.getElementById('s3').innerHTML = 'có 28 hoặc 29 ngày'
+                break;
+            case '4':
+            case '6':
+            case '9':
+            case '11':
+                document.getElementById('s3').innerHTML = 'có 30 ngày'
+                break;
+            default :
+                document.getElementById('s3').innerHTML = 'làm gì có cái tháng này'
+                break;
+        }
+    }
+</script>
+
+
+</body>
+</html>
